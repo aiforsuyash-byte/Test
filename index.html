@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page - Systems Check</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .status-dot {
+            height: 12px;
+            width: 12px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1><span class="status-dot"></span>Index.html is Live</h1>
+        <p>If you can see this, your web server is routing correctly.</p>
+        <p id="js-check" style="color: #e74c3c;">JavaScript: Not Working</p>
+    </div>
+
+    <script>
+        // Quick JS verification
+        document.getElementById('js-check').textContent = "JavaScript: Active";
+        document.getElementById('js-check').style.color = "#2ecc71";
+        console.log("Test page loaded successfully.");
+    </script>
+</body>
+</html>
